@@ -1,0 +1,114 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Vdark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Vligth-gray: hsl(0, 0%, 95%);
+    --font-lexend:'Lexend Deca', sans-serif;
+    --font-shoulders: 'Big Shoulders Display', cursive;
+}
+body{
+    font-size: 15px;
+    background-color: var(--Vligth-gray);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 30px;
+}
+.container__sedan{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--Bright-orange);
+    padding: 45px;
+    border-radius: 15px 15px 0px 0px;
+}
+.container__suv{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--Dark-cyan);
+    padding: 45px;  
+}
+.container__luxury{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--Vdark-cyan);
+    padding: 45px; 
+    border-radius: 0px 0px 15px 15px; 
+}
+.icons{
+    width: 30%;
+}
+h1{
+    font-family: var(--font-shoulders);
+    font-size: 45px;
+    color: var(--transparent-white);
+    text-transform: uppercase;
+}
+h2{
+    font-family: var(--font-lexend);
+    color: var(--transparent-white);
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.anchor{
+    border-radius: 40px;
+    background-color: var(--Vligth-gray);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 60%;
+    font-family: var(--font-lexend);
+}
+.anchor__sedan{
+    color: var(--Bright-orange);
+}
+.anchor__suv{
+    color: var(--Dark-cyan);
+}
+.anchor__luxury{
+    color: var(--Vdark-cyan);
+}
+@media screen and (min-width: 960px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        padding: 200px 200px;
+        width: 70%;
+    }
+    .container__sedan{
+        gap: 60px;
+        border-radius: 15px 0px 0px 15px ;
+    }
+    .container__suv{
+        gap: 60px;
+    }
+    .container__luxury{
+        gap: 60px;
+        border-radius: 0px 15px 15px 0px;
+    }
+    .anchor{
+        margin-top: 60px;
+    }
+    .anchor__sedan:hover{
+        border-radius: 40px;
+        border: 1px solid var(--transparent-white);
+        background-color: var(--Bright-orange);
+        color: var(--transparent-white);
+    }
+    .anchor__suv:hover{
+        border-radius: 40px;
+        border: 1px solid var(--transparent-white);
+        background-color: var(--Dark-cyan);
+        color: var(--transparent-white);
+    }
+    .anchor__luxury:hover{
+        border-radius: 40px;
+        border: 1px solid var(--transparent-white);
+        background-color: var(--Vdark-cyan);
+        color: var(--transparent-white);
+    }
+}
